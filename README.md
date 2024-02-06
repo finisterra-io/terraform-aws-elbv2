@@ -32,7 +32,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_access_logs"></a> [access\_logs](#input\_access\_logs) | A boolean flag to enable/disable access\_logs | `map(any)` | `{}` | no |
 | <a name="input_aws_lb_listeners"></a> [aws\_lb\_listeners](#input\_aws\_lb\_listeners) | A map of listener configurations where the key is the port number | `any` | `[]` | no |
-| <a name="input_create_security_group"></a> [create\_security\_group](#input\_create\_security\_group) | Enables the security group | `bool` | `false` | no |
 | <a name="input_cross_zone_load_balancing_enabled"></a> [cross\_zone\_load\_balancing\_enabled](#input\_cross\_zone\_load\_balancing\_enabled) | A boolean flag to enable/disable cross zone load balancing | `bool` | `true` | no |
 | <a name="input_deletion_protection_enabled"></a> [deletion\_protection\_enabled](#input\_deletion\_protection\_enabled) | A boolean flag to enable/disable deletion protection for ALB | `bool` | `false` | no |
 | <a name="input_drop_invalid_header_fields"></a> [drop\_invalid\_header\_fields](#input\_drop\_invalid\_header\_fields) | Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). | `bool` | `false` | no |
@@ -46,8 +45,6 @@ No modules.
 | <a name="input_load_balancer_name_max_length"></a> [load\_balancer\_name\_max\_length](#input\_load\_balancer\_name\_max\_length) | The max length of characters for the load balancer. | `number` | `32` | no |
 | <a name="input_load_balancer_type"></a> [load\_balancer\_type](#input\_load\_balancer\_type) | The type of load balancer to create. Possible values are `application` or `network` | `string` | n/a | yes |
 | <a name="input_preserve_host_header"></a> [preserve\_host\_header](#input\_preserve\_host\_header) | Indicates whether the Application Load Balancer should preserve the Host header in the HTTP request and send it to the target without any change. | `bool` | `false` | no |
-| <a name="input_security_group_name"></a> [security\_group\_name](#input\_security\_group\_name) | Name of the security group to be associated with the replication group | `string` | `null` | no |
-| <a name="input_security_group_names"></a> [security\_group\_names](#input\_security\_group\_names) | A list of additional security group names to allow access to ALB | `list(string)` | `[]` | no |
 | <a name="input_security_groups"></a> [security\_groups](#input\_security\_groups) | A list of additional security group ids to allow access to ALB | `list(string)` | `[]` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of subnet IDs to associate with ALB | `list(string)` | `null` | no |
 | <a name="input_subnet_names"></a> [subnet\_names](#input\_subnet\_names) | The names for the default subnets, uses a module label name if left empty | `list(any)` | `null` | no |
