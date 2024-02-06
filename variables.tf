@@ -131,33 +131,6 @@ variable "security_group_name" {
   description = "Name of the security group to be associated with the replication group"
 }
 
-variable "security_group_description" {
-  type        = string
-  default     = null
-  description = "Description of the security group to be associated with the replication group"
-}
-
-variable "security_group_tags" {
-  type        = map(string)
-  description = "Additional tags for the security group to create for the DocumentDB cluster"
-  default     = {}
-}
-
-variable "security_group_rules" {
-  description = "Map of security group rules"
-  type = map(object({
-    cidr_blocks = list(string)
-    protocol    = string
-    type        = string
-    description = optional(string)
-    from_port   = optional(number)
-    to_port     = optional(number)
-  }))
-  default = null
-}
-
-
-
 variable "aws_lb_listeners" {
   description = "A map of listener configurations where the key is the port number"
   type        = any

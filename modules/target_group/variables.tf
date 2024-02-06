@@ -1,7 +1,7 @@
 variable "create" {
-    description = "Determines if is created"
-    type        = bool
-    default     = true
+  description = "Determines if is created"
+  type        = bool
+  default     = true
 }
 
 variable "name" {
@@ -82,5 +82,5 @@ variable "listener_rules" {
 variable "listener_arn" {
   description = "The ARN of the listener to which to attach the rule"
   type        = string
-  default    = null
+  default     = null
 } 

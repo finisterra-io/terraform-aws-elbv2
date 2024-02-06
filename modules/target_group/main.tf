@@ -16,8 +16,8 @@ resource "aws_lb_target_group" "this" {
       enabled             = try(health_check.value.enabled, true)
       healthy_threshold   = try(health_check.value.healthy_threshold, null)
       interval            = try(health_check.value.interval, null)
-      matcher             = try(health_check.value.matcher != "" ? health_check.value.matcher : null, null) 
-      path                = try(health_check.value.path != "" ? health_check.value.path : null, null) 
+      matcher             = try(health_check.value.matcher != "" ? health_check.value.matcher : null, null)
+      path                = try(health_check.value.path != "" ? health_check.value.path : null, null)
       port                = try(health_check.value.port, null)
       protocol            = try(health_check.value.protocol, null)
       timeout             = try(health_check.value.timeout, null)
@@ -98,8 +98,8 @@ resource "aws_lb_listener_rule" "this" {
       dynamic "http_header" {
         for_each = try(condition.value.http_header, [])
         content {
-          http_header_name  = http_header.value.http_header_name
-          values            = http_header.value.values
+          http_header_name = http_header.value.http_header_name
+          values           = http_header.value.values
         }
       }
     }
