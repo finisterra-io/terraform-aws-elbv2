@@ -22,12 +22,6 @@ variable "subnet_ids" {
   default     = null
 }
 
-variable "security_group_names" {
-  type        = list(string)
-  default     = []
-  description = "A list of additional security group names to allow access to ALB"
-}
-
 variable "security_groups" {
   type        = list(string)
   default     = []
@@ -83,12 +77,6 @@ variable "drop_invalid_header_fields" {
   description = "Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false)."
 }
 
-variable "create_security_group" {
-  type        = bool
-  description = "Enables the security group"
-  default     = false
-}
-
 variable "load_balancer_name" {
   type        = string
   default     = ""
@@ -123,12 +111,6 @@ variable "subnet_names" {
   type        = list(any)
   description = "The names for the default subnets, uses a module label name if left empty"
   default     = null
-}
-
-variable "security_group_name" {
-  type        = string
-  default     = null
-  description = "Name of the security group to be associated with the replication group"
 }
 
 variable "aws_lb_listeners" {
