@@ -33,7 +33,6 @@ No modules.
 | <a name="input_create"></a> [create](#input\_create) | Determines if is created | `bool` | `true` | no |
 | <a name="input_deregistration_delay"></a> [deregistration\_delay](#input\_deregistration\_delay) | The amount of time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds | `number` | `null` | no |
 | <a name="input_health_check"></a> [health\_check](#input\_health\_check) | Health check configuration for the target group | `map(any)` | <pre>{<br>  "enabled": true,<br>  "healthy_threshold": 3,<br>  "interval": 30,<br>  "path": "/",<br>  "port": "traffic-port",<br>  "protocol": "HTTP",<br>  "timeout": 5,<br>  "unhealthy_threshold": 3<br>}</pre> | no |
-| <a name="input_listener_arn"></a> [listener\_arn](#input\_listener\_arn) | The ARN of the listener to which to attach the rule | `string` | `null` | no |
 | <a name="input_listener_rules"></a> [listener\_rules](#input\_listener\_rules) | List of listener rules to create on the load balancer | `map(any)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name to use on target group created | `string` | `null` | no |
 | <a name="input_port"></a> [port](#input\_port) | Port to use on target group created | `number` | `80` | no |
