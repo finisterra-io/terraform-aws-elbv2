@@ -27,4 +27,3 @@ output "listeners" {
   description = "The list of listener blocks of the ALB"
   value       = aws_lb_listener.this
 }
-
