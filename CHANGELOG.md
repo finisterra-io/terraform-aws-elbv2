@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.2](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.1...v1.0.2) (2024-02-16)
+
+
+### Bug Fixes
+
+* drift ([fa42b35](https://github.com/finisterra-io/terraform-aws-elbv2/commit/fa42b359897b8e598f25b9f15d6c46fc00127be4))
+
 ### [1.0.1](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.0...v1.0.1) (2024-02-07)
 
 
