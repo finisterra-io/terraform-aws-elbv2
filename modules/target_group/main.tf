@@ -44,10 +44,52 @@ resource "aws_lb_listener_rule" "this" {
   listener_arn = each.value.listener_arn
   priority     = each.value.priority
 
-  action {
-    target_group_arn = aws_lb_target_group.this[0].arn
-    type             = "forward"
+
+  dynamic "action" {
+    for_each = try(each.value.action, [])
+
+    content {
+      type = try(action.value.type, null)
+      dynamic "forward" {
+        for_each = try(action.value.forward, [])
+
+        content {
+          dynamic "target_group" {
+            for_each = try(forward.value.target_group, [])
+            content {
+              arn    = aws_lb_target_group.this[0].arn
+              weight = target_group.value.weight
+            }
+          }
+          dynamic "stickiness" {
+            for_each = try(forward.value.stickiness, [])
+
+            content {
+              duration = stickiness.value.duration
+              enabled  = stickiness.value.enabled
+            }
+          }
+        }
+      }
+    }
   }
+
+  # action {
+  #   target_group_arn = aws_lb_target_group.this[0].arn
+  #   type             = "forward"
+  #   dynamic "forward" {
+  #     for_each = length(each.value.forward) > 0 ? [each.value.forward] : []
+  #     content {
+  #       dynamic "stickiness" {
+  #         for_each = length(forward.value.stickiness) > 0 ? [forward.value.stickiness] : []
+  #         content {
+  #           duration = stickiness.value.duration
+  #           enabled  = stickiness.value.enabled
+  #         }
+  #       }
+  #     }
+  #   }
+  # }
 
   dynamic "condition" {
     for_each = length(each.value.conditions) > 0 ? each.value.conditions : []
@@ -102,6 +144,7 @@ resource "aws_lb_listener_rule" "this" {
           values           = http_header.value.values
         }
       }
+
     }
   }
 
