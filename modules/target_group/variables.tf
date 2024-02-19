@@ -78,3 +78,21 @@ variable "listener_rules" {
   type        = map(any)
   default     = {}
 }
+
+variable "proxy_protocol_v2" {
+  description = "If true, the connection between the load balancer and the targets uses the Proxy Protocol version 2"
+  type        = bool
+  default     = false
+}
+
+variable "slow_start" {
+  description = "The time period, in seconds, during which a newly registered target receives a linearly increasing share of the traffic to the target group. After this time period ends, the target receives its full share of the traffic. The range is 30-900 seconds (15 minutes). Slow start mode is disabled by default"
+  type        = number
+  default     = null
+}
+
+variable "lambda_multi_value_headers_enabled" {
+  description = "If true, the request headers are passed to the targets as is. If false, the headers are converted to lowercase before they are sent to the targets"
+  type        = bool
+  default     = false
+}

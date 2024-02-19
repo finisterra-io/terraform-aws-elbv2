@@ -35,6 +35,10 @@ resource "aws_lb_target_group" "this" {
     }
   }
 
+  proxy_protocol_v2                  = var.proxy_protocol_v2
+  slow_start                         = var.slow_start
+  lambda_multi_value_headers_enabled = var.lambda_multi_value_headers_enabled
+
   tags = var.tags
 }
 
@@ -73,23 +77,6 @@ resource "aws_lb_listener_rule" "this" {
       }
     }
   }
-
-  # action {
-  #   target_group_arn = aws_lb_target_group.this[0].arn
-  #   type             = "forward"
-  #   dynamic "forward" {
-  #     for_each = length(each.value.forward) > 0 ? [each.value.forward] : []
-  #     content {
-  #       dynamic "stickiness" {
-  #         for_each = length(forward.value.stickiness) > 0 ? [forward.value.stickiness] : []
-  #         content {
-  #           duration = stickiness.value.duration
-  #           enabled  = stickiness.value.enabled
-  #         }
-  #       }
-  #     }
-  #   }
-  # }
 
   dynamic "condition" {
     for_each = length(each.value.conditions) > 0 ? each.value.conditions : []
