@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.4](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.3...v1.0.4) (2024-02-21)
+
+
+### Bug Fixes
+
+* data subnets ([e1148bf](https://github.com/finisterra-io/terraform-aws-elbv2/commit/e1148bff1290af464e1764a9326e8ed42dd35caf))
+
 ### [1.0.3](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.2...v1.0.3) (2024-02-19)
 
 
