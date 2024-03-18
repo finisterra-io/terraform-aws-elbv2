@@ -39,7 +39,7 @@ No modules.
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | A boolean flag to enable/disable the ALB module | `bool` | `true` | no |
 | <a name="input_http2_enabled"></a> [http2\_enabled](#input\_http2\_enabled) | A boolean flag to enable/disable HTTP/2 | `bool` | `true` | no |
 | <a name="input_idle_timeout"></a> [idle\_timeout](#input\_idle\_timeout) | The time in seconds that the connection is allowed to be idle | `number` | `60` | no |
-| <a name="input_internal"></a> [internal](#input\_internal) | A boolean flag to determine whether the ALB should be internal | `bool` | `false` | no |
+| <a name="input_internal"></a> [internal](#input\_internal) | A boolean flag to determine whether the ALB should be internal | `bool` | `true` | no |
 | <a name="input_ip_address_type"></a> [ip\_address\_type](#input\_ip\_address\_type) | The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`. | `string` | `"ipv4"` | no |
 | <a name="input_load_balancer_name"></a> [load\_balancer\_name](#input\_load\_balancer\_name) | The name for the default load balancer, uses a module label name if left empty | `string` | `""` | no |
 | <a name="input_load_balancer_name_max_length"></a> [load\_balancer\_name\_max\_length](#input\_load\_balancer\_name\_max\_length) | The max length of characters for the load balancer. | `number` | `32` | no |
