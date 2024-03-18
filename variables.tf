@@ -30,7 +30,7 @@ variable "security_groups" {
 
 variable "internal" {
   type        = bool
-  default     = false
+  default     = true
   description = "A boolean flag to determine whether the ALB should be internal"
 }
 
