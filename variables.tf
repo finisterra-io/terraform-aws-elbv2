@@ -116,7 +116,7 @@ variable "subnet_names" {
 variable "aws_lb_listeners" {
   description = "A map of listener configurations where the key is the port number"
   type        = any
-  default     = []
+  default     = {}
 }
 
 variable "load_balancer_type" {
