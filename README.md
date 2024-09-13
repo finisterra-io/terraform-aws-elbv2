@@ -31,7 +31,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_access_logs"></a> [access\_logs](#input\_access\_logs) | A boolean flag to enable/disable access\_logs | `map(any)` | `{}` | no |
-| <a name="input_aws_lb_listeners"></a> [aws\_lb\_listeners](#input\_aws\_lb\_listeners) | A map of listener configurations where the key is the port number | `any` | `[]` | no |
+| <a name="input_aws_lb_listeners"></a> [aws\_lb\_listeners](#input\_aws\_lb\_listeners) | A map of listener configurations where the key is the port number | `any` | `{}` | no |
 | <a name="input_cross_zone_load_balancing_enabled"></a> [cross\_zone\_load\_balancing\_enabled](#input\_cross\_zone\_load\_balancing\_enabled) | A boolean flag to enable/disable cross zone load balancing | `bool` | `true` | no |
 | <a name="input_deletion_protection_enabled"></a> [deletion\_protection\_enabled](#input\_deletion\_protection\_enabled) | A boolean flag to enable/disable deletion protection for ALB | `bool` | `false` | no |
 | <a name="input_drop_invalid_header_fields"></a> [drop\_invalid\_header\_fields](#input\_drop\_invalid\_header\_fields) | Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). | `bool` | `false` | no |
