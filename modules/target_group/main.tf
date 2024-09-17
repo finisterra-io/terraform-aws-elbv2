@@ -40,6 +40,9 @@ resource "aws_lb_target_group" "this" {
   lambda_multi_value_headers_enabled = var.lambda_multi_value_headers_enabled
 
   tags = var.tags
+   lifecycle {
+     ignore_changes = [ deregistration_delay ]
+   }
 }
 
 resource "aws_lb_listener_rule" "this" {
