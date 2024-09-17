@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.9](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.8...v1.0.9) (2024-09-17)
+
+
+### Bug Fixes
+
+* tags ([b85fef0](https://github.com/finisterra-io/terraform-aws-elbv2/commit/b85fef01c42ceb705b57991402463bc46b141ed1))
+
 ### [1.0.8](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.7...v1.0.8) (2024-09-17)
 
 
