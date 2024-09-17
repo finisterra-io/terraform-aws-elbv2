@@ -36,6 +36,8 @@ resource "aws_lb_listener" "this" {
 
   load_balancer_arn = one(aws_lb.default[*].arn)
 
+  alpn_policy = var.alpn_policy
+
   port            = each.value.port
   protocol        = each.value.protocol
   ssl_policy      = try(each.value.ssl_policy, null)
