@@ -129,3 +129,9 @@ variable "enable_xff_client_port" {
   default     = null
   description = "Enables the X-Forwarded-For, X-Forwarded-Proto, and X-Forwarded-Port headers"
 }
+
+variable "alpn_policy" {
+  type        = string
+  default     = null
+  description = "The name of the Application-Layer Protocol Negotiation (ALPN) policy. An ALPN policy is used to configure a listener to accept connections on specified protocols."
+}
