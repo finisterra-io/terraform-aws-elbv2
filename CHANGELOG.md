@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.7](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.6...v1.0.7) (2024-09-17)
+
+
+### Bug Fixes
+
+* deregistration_delay ([20647b5](https://github.com/finisterra-io/terraform-aws-elbv2/commit/20647b5be32a1790b268e3d5b76526a1ed6542ab))
+* deregistration_delay ([94362cf](https://github.com/finisterra-io/terraform-aws-elbv2/commit/94362cf77aaf898fc95eee4c5559fea1b4b58126))
+
 ### [1.0.6](https://github.com/finisterra-io/terraform-aws-elbv2/compare/v1.0.5...v1.0.6) (2024-09-13)
 
 
